@@ -1,17 +1,15 @@
 import type { SWRResponse } from "swr";
 
-// export interface IData {
-//   name: string;
-//   uv: number;
-//   pv: number;
-//   amt: number;
+// export interface ChartData {
+//   date: string;
+//   value: number;
 // }
 
 export interface ChartProps {
   width?: number;
   height?: number;
   className?: string;
-  data: IData[];
+  data: IDetailDataType[];
 }
 
 export type IUrlParams = {

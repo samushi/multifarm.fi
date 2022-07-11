@@ -10,9 +10,9 @@ const Chart = (props: ChartProps) => {
       height={props.height ? props.height : 400}
       data={props.data}
     >
-      <Line type="monotone" dataKey="pv" stroke="#8884d8" />
+      <Line type="monotone" dataKey="value" stroke="#8884d8" />
       <CartesianGrid stroke="#ccc" />
-      <XAxis dataKey="name" />
+      <XAxis dataKey="date" />
       <YAxis />
     </LineChart>
   );
