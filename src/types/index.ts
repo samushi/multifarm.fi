@@ -15,7 +15,6 @@ export interface ChartProps {
 }
 
 export type IUrlParams = {
-  farmId: string;
   page: number;
   tvlMin: number;
   sort: string;
@@ -31,6 +30,9 @@ export interface IData {
   farm: string;
   farmId: string;
   blockchain: string;
+  aprYearly: number;
+  aprDaily: number;
+  tvlStaked: number;
 }
 
 export interface IAssetPayload {
@@ -40,4 +42,18 @@ export interface IAssetPayload {
 
 export interface ISwrData extends Omit<SWRResponse, "data"> {
   data?: IAssetPayload;
+}
+
+// Get Asset Details
+export interface IDetailDataType {
+  date: string;
+  value: number;
+}
+
+export interface IDetailsData {
+  aprHistory: IDetailDataType[];
+  tvlStakedHistory: IDetailDataType[];
+}
+export interface ISwrDataDetails extends Omit<SWRResponse, "data"> {
+  data?: IDetailsData;
 }
