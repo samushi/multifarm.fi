@@ -14,7 +14,7 @@ const List = (): JSX.Element => {
   if (!data) return <div>Loading...</div>;
 
   const items = data.data;
-  const max_pages = data.max_pages;
+
   return (
     <>
       <Outlet />
@@ -34,7 +34,6 @@ const List = (): JSX.Element => {
             return (
               <tr key={index}>
                 <td>
-                  {/* <a href="#">{item.asset}</a> */}
                   <Link to={`/item/${item.assetId}`}>{item.asset}</Link>
                 </td>
                 <td>{item.tvlStaked}</td>
