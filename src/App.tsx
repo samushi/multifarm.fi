@@ -5,15 +5,13 @@ import Logo from "./components/logo";
 
 const App = (): JSX.Element => {
   return (
-    <div className="flex items-center justify-center">
-      <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-        <Logo className="logo" />
-        <Routes>
-          <Route path="/" element={<List />}>
-            <Route path="item/:assetId" element={<Item />} />
-          </Route>
-        </Routes>
-      </div>
+    <div className="w-full px-10">
+      <Logo className="logo" />
+      <Routes>
+        <Route path="/" element={<List />}>
+          <Route path="item/:assetId" element={<Item />} />
+        </Route>
+      </Routes>
     </div>
   );
 };

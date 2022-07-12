@@ -23,8 +23,20 @@ body {
   @apply table mx-auto text-center my-10;
 }
 
+.chart-tooltip {
+  @apply bg-white border-2 border-gray-300 rounded-lg shadow-md text-black px-5 py-4;
+
+  h4 {
+    @apply font-bold text-xl;
+  }
+
+  p {
+    @apply font-medium text-lg;
+  }
+}
+
 .multifarm-table {
-  @apply w-4/5 text-sm text-left text-gray-500 dark:text-gray-400 mb-10;
+  @apply w-full text-sm text-left text-gray-500 dark:text-gray-400 mb-10;
 
   > thead {
     @apply text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400;

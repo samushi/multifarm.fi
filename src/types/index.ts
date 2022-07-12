@@ -1,10 +1,5 @@
 import type { SWRResponse } from "swr";
 
-// export interface ChartData {
-//   date: string;
-//   value: number;
-// }
-
 export interface ChartProps {
   width?: number;
   height?: number;

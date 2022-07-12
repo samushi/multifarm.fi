@@ -1,5 +1,6 @@
 import { getAssets } from "../lib/api";
 import { Link, Outlet } from "react-router-dom";
+import numbro from "numbro";
 
 const List = (): JSX.Element => {
   const { data, error } = getAssets({
@@ -36,9 +37,24 @@ const List = (): JSX.Element => {
                 <td>
                   <Link to={`/item/${item.assetId}`}>{item.asset}</Link>
                 </td>
-                <td>{item.tvlStaked}</td>
-                <td>{item.aprYearly}%</td>
-                <td>{item.aprDaily}%</td>
+                <td>
+                  {numbro(item.tvlStaked).format({
+                    average: true,
+                    mantissa: 2,
+                  })}
+                </td>
+                <td>
+                  {numbro(item.aprYearly).format({
+                    output: "percent",
+                    mantissa: 2,
+                  })}
+                </td>
+                <td>
+                  {numbro(item.aprDaily).format({
+                    output: "percent",
+                    mantissa: 2,
+                  })}
+                </td>
                 <td>{item.blockchain}</td>
                 <td>{item.farm}</td>
               </tr>

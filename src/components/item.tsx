@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { getAssetDetails } from "../lib/api";
-import Chart from "./chart";
+import ArpChart from "./ArpChart";
+import TvlChart from "./TvlChart";
 
 const Item = (): JSX.Element => {
   const { assetId } = useParams();
@@ -12,8 +13,8 @@ const Item = (): JSX.Element => {
 
   return (
     <div className="flex">
-      <Chart data={data.aprHistory} />
-      <Chart data={data.tvlStakedHistory} />
+      <ArpChart data={data.aprHistory} />
+      <TvlChart data={data.tvlStakedHistory} />
     </div>
   );
 };
